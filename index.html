@@ -3,9 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="./style.css" type="text/css" />
 </head>
 <body>
-    <script src="index.js"></script>
+  <header>
+    <h1>Rock, Paper, Scissors</h1>
+    <h2>Can you win against the machines? How will you fare when the AI war begins?</h2>
+  </header>
+  <section class="weapon-selection">
+    <h1>Select Your Weapon</h1>
+    <h3>Click an option to begin the game</h3>
+    <div id="flex-container">
+      <a id="rock">Rock</a>
+      <a id="paper">Paper</a>
+      <a id="scissors">Scissors</a>
+    </div>
+  </section>
+  <section class="game-results">
+    <h1>Let's see your fate...</h1>
+    <div>
+      <h3>Computer's Weapon of Choice: <span id="computer-choice"></span></h3>
+    </div>
+  </section>
+
+   <script src="index.js"></script>
 </body>
 </html>
