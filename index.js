@@ -1,34 +1,45 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
-
-
-
+const votingAge = 18;
+if (votingAge >= 18) { //I know the instructions say "ig age > 18" but I'm using >= given the fact that people are legally allowed to vote at age 18 (inclusive) and up.
+  console.log("true");
+}
 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
-
-
-
+let variable1 = 1;
+let variable2 = 2;
+if (variable2 > variable1) {
+  variable1++;
+}
 
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
-
-
-
+const stringVariable = Number("1999");
 
 
 //Task d: Write a function to multiply a*b 
-
-
-
+function multiply(a, b) {
+  if (typeof a === "number" && typeof b === "number") {
+    return a * b;
+  } else {
+    console.log("Parameters a and b must both be numbers for function to work properly.")
+    return "Params a and b must both be numbers for function to work properly.";
+  }
+}
 
 
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
-
-
-
+function ageInDogYears(age) {
+  if (typeof age === "number") {
+    return age * 7;
+  } else {
+    console.log("Param age must be a number for function to work properly.");
+    return "Param age must be a number for function to work properly.";
+  }
+}
 
 
 /************************************************************** Task 3 **************************************************************/
