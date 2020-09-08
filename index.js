@@ -23,11 +23,13 @@ function multiply(a, b) {
   if (typeof a === "number" && typeof b === "number") {
     return a * b;
   } else {
-    console.log("Parameters a and b must both be numbers for function to work properly.")
-    return "Params a and b must both be numbers for function to work properly.";
+    return "Parameters a and b must both be numbers for function to work properly.";
   }
 }
 
+
+// console.log(multiply(1, 2));
+// console.log(multiply("Chaz", 1));
 
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
@@ -35,12 +37,12 @@ function multiply(a, b) {
 function ageInDogYears(age) {
   if (typeof age === "number") {
     return age * 7;
-  } else {
+  }
+  else {
     console.log("Param age must be a number for function to work properly.");
     return "Param age must be a number for function to work properly.";
   }
 }
-
 
 /************************************************************** Task 3 **************************************************************/
 //Dog feeder 
@@ -60,16 +62,92 @@ function ageInDogYears(age) {
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
+const dogFeeder = (weight, age) => {
+  if (age >= 1) {
+    if (0 < weight && weight <=5) {
+      return weight * 0.05;
+    } else if (weight >= 6 && weight < 10){
+      return weight * 0.04;
+    } else if (weight >= 11 && weight <=15) {
+      return weight * 0.03;
+    } else {
+      return weight * 0.02;
+    }
+  } else {
+    const monthDecimal = 1/12;
+    if ( weight >= (2*monthDecimal) && weight < (4*monthDecimal)) {
+      return weight * 0.1;
+    } else if ( weight >= (4*monthDecimal) && weight < (7*monthDecimal)) {
+      return weight & 0.05;
+    } else if ( weight >= (7*monthDecimal) && weight < 1) {
+      return weight * 0.04;
+    }
+  }
+}
 
+// console.log(dogFeeder(15, 1));
 
 
 
 /************************************************************** Task 4 **************************************************************/
-// Rock, Paper, Sissors
-// Your function should take a string (either rock paper or sissors)
+// Rock, Paper, Scissors
+// Your function should take a string (either rock paper or scissors)
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
+
+  const rockPaperScissors = userInput => {
+    userInput = userInput.toLowerCase();
+    switch (userInput) {
+      case "rock":
+        userInput = 0;
+        break;
+      case "paper": 
+        userInput = 1;
+        break;
+      case "scissors":
+        userInput = 2;
+        break;
+      default: 
+        console.log(`${userInput} was not a valid choice of weapon, therefore you have lost.`);
+        return "You've forfeited due to invalid weapon choice!";
+    }
+
+    /*
+      0 beats 2
+      0 loses to 1 
+
+      1 beats 0
+      1 loses to 2
+
+      2 beats 1
+      2 loses to 0 
+    */
+
+    const computerInput = Math.floor(Math.random() * 3);
+    // console.log(computerInput);
+
+    if (userInput === computerInput) {
+      return "It's a tie!";
+    }
+    else if (userInput === 0 && (Math.abs(userInput - computerInput) === 2)) {
+      // user chooses rock
+      // |0-2|=2, comp chooses scissors. user wins
+      //else, computer wins
+      return "User wins!";
+      
+    }
+    else if (userInput > computerInput && userInput-computerInput===1) {
+      // 1>0 OR 2>1, 1-0=1, 2-1=1
+      // paper beats rock, scissors beats paper
+      return "User wins!";
+    }
+    else {
+      return "Computer wins!";
+    }
+  }
+  
+  // console.log(rockPaperScissors("scissors"));
 
   
   
