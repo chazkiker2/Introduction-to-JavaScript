@@ -239,6 +239,13 @@ const numVowels = str => {
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
+
+
+/*
+  SEE indexStretch.js FILE!!!!!
+*/
+
+
 // const rockPaperScissors_STRETCH = userInput => {
 //   const aElements = document.querySelectorAll('a');
 //   for (let i=0; i<aElements.length; i++) {
@@ -257,9 +264,9 @@ const numVowels = str => {
 //     case "paper": 
 //       userInput = 1;
 //       break;
-//     case "scissors":
 //       userInput = 2;
 //       break;
+//         case "scissors":
 //     default: 
 //       console.log(`${userInput} was not a valid choice of weapon, therefore you have lost.`);
 //       return "You've forfeited due to invalid weapon choice!";
@@ -288,25 +295,52 @@ const numVowels = str => {
 // }
 
 // const playGame = e => {
-//   let userInput = e.target.innerText;
+//   const target = e.target;
+//   let userInput = target.id;
+//   // alert(typeof target);
+//   // alert(typeof userInput);
+//   // alert(userInput);
 //   switch (userInput) {
-//     case "Rock":
+//     case "rock":
 //       userInput = 0;
 //       break;
-//     case "Paper": 
+//     case "paper": 
 //       userInput = 1;
 //       break;
-//     case "Scissors":
+//     case "scissors":
 //       userInput = 2;
 //       break;
 //     default: 
 //       // console.log(`${userInput} was not a valid choice of weapon, therefore you have lost.`);
 //       // return "You've forfeited due to invalid weapon choice!";
 //       alert('something went wrong!');
-//       return;
-    
-//   console.log(userInput);
+//       return;  
 //   }
+//   // alert(userInput);
+//   const computerInput = Math.floor(Math.random() * 3);
+//   // alert(computerInput);
+
+  
+
+//   if (userInput === computerInput) {
+//     return "It's a tie!";
+//   }
+//   else if (userInput === 0 && (Math.abs(userInput - computerInput) === 2)) {
+//     // user chooses rock
+//     // |0-2|=2, comp chooses scissors. user wins
+//     return "User wins!";
+//   }
+//   else if (userInput > computerInput && userInput-computerInput===1) {
+//     // 1>0 OR 2>1, 1-0=1, 2-1=1
+//     // paper beats rock, scissors beats paper
+//     return "User wins!";
+//   }
+//   else {
+//     return "Computer wins!";
+//   }
+
+
+
 // }
 
 // rockPaperScissors_STRETCH("chaz");

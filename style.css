@@ -12,12 +12,21 @@ section {
   margin: 2px;
 }
 
-#flex-container {
+.flex-container {
   margin: 30px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.flex-content {
+  display: inline-block;
+  width: 40%;
+}
+
+.flex-content h3 {
+  display: inline-block;
 }
 
 a {
@@ -27,4 +36,17 @@ a {
   min-width: 115px;
   line-height: 5;
   text-align: center;
+}
+
+a:hover {
+  background-color: gray;
+  color: red;
+  text-decoration: underline;
+  font-size: 1.5rem;
+}
+
+a.clickedButton {
+  background-color: black;
+  color: white;
+  font-size: 1.5rem;
 }
